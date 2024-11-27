@@ -1,0 +1,37 @@
+.team-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  width: 313px;
+  height: 241px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.team-card p {
+    text-align: center;
+}
+.card-top {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  border-bottom: 1px solid #deb992;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.card-top h2 {
+  margin: 0;
+}
+
+.card-top p {
+  margin: 0;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 8px;
+  }

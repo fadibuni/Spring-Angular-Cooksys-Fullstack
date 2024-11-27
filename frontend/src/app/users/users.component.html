@@ -1,0 +1,77 @@
+<app-navbar></app-navbar>
+
+  <div class="users-page">
+    <div class="users-header">
+      <h1>User Registry</h1>
+      <p>A general view of all your members in your organization</p>
+    </div>
+  
+    <table class="users-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Active</th>
+          <th>Admin</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.profile.firstName }} {{ user.profile.lastName }}</td>
+          <td>{{ user.profile.email }}</td>
+          <td [class.active]="user.active" [class.inactive]="!user.active">{{ user.active ? 'YES' : 'NO' }}</td>
+          <td [class.active]="user.admin" [class.inactive]="!user.admin">{{ user.admin ? 'YES' : 'NO' }}</td>
+          <td>{{ user.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <button class="add-user" (click)="openNewUserModal()">Add User</button>
+  </div>
+
+  <div class="modal-backdrop" *ngIf="showNewUserModal">
+    <div class="modal">
+      <div class="modal-header">
+        <button (click)="closeNewUserModal()" class="close-btn">×</button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <label for="firstName">First Name</label>
+          <input id="firstName" type="text" [(ngModel)]="newUser.firstName" placeholder="first name" required />
+        </div>
+        <div>
+          <label for="lastName">Last Name</label>
+          <input id="lastName" type="text" [(ngModel)]="newUser.lastName" placeholder="last name" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" [(ngModel)]="newUser.email" placeholder="email" required />
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" type="tel" [(ngModel)]="newUser.phone" placeholder="phone" required />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input id="password" type="password" [(ngModel)]="newUser.password" placeholder="password" required />
+        </div>
+        <div>
+          <label for="confirmPassword">Confirm Password</label>
+          <input id="confirmPassword" type="password" [(ngModel)]="newUser.confirmPassword" placeholder="confirm password" required />
+        </div>
+        <div>
+          <label for="admin">Make user an admin role?</label>
+          <select id="admin" [(ngModel)]="newUser.admin">
+            <option value="" disabled selected>Pick an option</option>
+            <option [ngValue]="true">True</option>
+            <option [ngValue]="false">False</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button (click)="createUser()" class="submit-btn">Submit</button>
+      </div>
+    </div>
+  </div>
+

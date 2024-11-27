@@ -1,0 +1,19 @@
+<div class="page">
+    <div class="selectCompany">
+      <h1 class="title">Select Company</h1>
+      <div class="companyOption">
+        <label for="dropdown"></label>
+        <select id="dropdown" [(ngModel)]="selectedCompany" (change)="onCompanySelect()">
+          <option value="">Pick an Option</option>
+          <option *ngFor="let company of companies" [value]="company.id">
+            {{ company.name }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="selectedCompany">
+    <app-announcements></app-announcements>
+  </div>
+  

@@ -1,0 +1,17 @@
+<div class="team-card" (click)="navigateToTeam()" >
+  <div class="card-top">
+    <h2>{{ team.name }}</h2>
+    <p># of projects {{ team.projects.length }}</p>
+  </div>
+  <p>Members</p>
+  <div class="team-members">
+    <div *ngFor="let teammate of team.teammates">
+      <app-name-cell
+        [name]="
+          teammate.profile.firstName + ' ' + teammate.profile.lastName.charAt(0)
+        "
+      ></app-name-cell>
+    </div>
+  </div>
+
+</div>

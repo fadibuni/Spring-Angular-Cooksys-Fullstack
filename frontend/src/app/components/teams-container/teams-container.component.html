@@ -1,0 +1,9 @@
+<div class="teams-container">
+  <app-team-card *ngFor="let team of teams" [team]="team"></app-team-card>
+  <app-add-team (click)="onAddTeam()"></app-add-team>
+  <app-team-form
+    *ngIf="showEditTeamPopup"
+    (close)="closeTeamPopup()"
+    (teamUpdated)="fetchTeams()"
+  ></app-team-form>
+</div>

@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class="page">
+  <div class="content">
+    <div class="header-row">
+      <h1>Announcements</h1>
+      <button *ngIf="isAdmin" class="new-announcement" (click)="openModal()">New</button>
+    </div>
+    <hr class="divider" />
+    <div class="announcement-list">
+      <div *ngFor="let announcement of announcements" class="announcement-card">
+        <h3>{{ announcement.authorName }}</h3>
+        <h2>{{ announcement.title }}</h2>
+        <p>{{ announcement.message }}</p>
+        <span>{{ announcement.date | date: 'MMMM d, yyyy' }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal-backdrop" *ngIf="showModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>New Announcement</h3>
+      <button (click)="closeModal()" class="close-btn">×</button>
+    </div>
+    <div class="modal-body">
+      <label for="title">Title</label>
+      <input
+        id="title"
+        type="text"
+        [(ngModel)]="announcementForm.title"
+        placeholder="Enter title"
+      />
+  
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        [(ngModel)]="announcementForm.message"
+        placeholder="Enter message"
+      ></textarea>
+    </div>
+    <div class="modal-footer">
+      <button (click)="submitAnnouncement()" class="submit-btn">Submit</button>
+    </div>
+  </div>
+</div>
+
+  

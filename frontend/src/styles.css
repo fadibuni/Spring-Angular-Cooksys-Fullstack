@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+/* styles.css or styles.scss */
+body {
+    background-color: #051622; /* Replace with your desired color */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Optional: Set a universal font style */
+}

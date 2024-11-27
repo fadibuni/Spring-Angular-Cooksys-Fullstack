@@ -1,0 +1,186 @@
+.projects-page {
+    padding: 20px;
+    color: #1ba098;
+  }
+  
+  .back-button {
+    background: none;
+    color: #1ba098;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  .new-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #1ba098;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  .projects-list {
+    margin-top: 16px;
+  }
+  
+  .project-card {
+    border-collapse: collapse;
+    border: #DEB992;
+
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    background-color: #051622;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .project-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #deb992;
+  }
+  
+  .project-card p {
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  .project-card .status {
+    font-weight: bold;
+  }
+  
+  .active {
+    color: green;
+  }
+  
+  .inactive {
+    color: red;
+  }
+  
+  .editButton {
+    align-self: flex-end;
+    background-color: #deb992;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .editButton:hover {
+    background-color: #caa67f;
+  }
+  
+.new-button {
+
+    position: absolute;
+    top: 11%;
+    left: 90%;
+    background-color: #1ba098;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.projects-list {
+    margin-top: 16px;
+}
+.project-card {
+    border-top: 1px  solid #DEB992;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background-color: #051622;
+    overflow: hidden;
+    padding-top: 50px; 
+}
+
+.project-card h2 {
+    margin: 0;
+}
+
+.project-card p {
+    margin: 8px 0;
+}
+
+.active {
+    color: green;
+}
+
+.inactive {
+    color: red;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #1e1e2f;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.close-button {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.new-button {
+  background: #1ba098;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button {
+    background-color: #1ba098;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}

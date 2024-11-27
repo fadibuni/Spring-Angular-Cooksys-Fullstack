@@ -1,0 +1,100 @@
+.pageLogin{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #051622;
+  overflow: hidden;
+}
+
+.title{
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #1BA098; 
+}
+
+.loginBox{
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid #DEB992;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.emailLabel,
+.passwordLabel{
+  color: #1BA098;
+}
+
+
+.loginButton {
+  width: 35%; 
+  padding: 10px 20px;
+  margin-top: 20px; 
+  border: 2px solid #1BA098; 
+  border-radius: 25px;
+  background-color: transparent;
+  color: #1BA098;
+  font-size: 1rem; 
+  font-weight: bold; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.loginButton:hover {
+  background-color: #1BA098; 
+  color: #051622;
+}
+
+.email-container,
+.password-container {
+  margin-bottom: 20px; 
+}
+
+
+.pageAnnouncements {
+  padding: 20px;
+  background-color: #0f172a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+  
+.admin-banner {
+  background-color: #1e40af;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+  
+.announcement-card {
+  background-color: #1e293b;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #334155;
+}
+  
+.announcement-card h3 {
+  margin: 0;
+  color: #38bdf8;
+}
+
+.announcement-card span {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 5px;
+  display: block;
+}
+  

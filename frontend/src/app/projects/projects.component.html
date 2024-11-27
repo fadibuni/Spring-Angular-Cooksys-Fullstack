@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+
+<div class="projects-page">
+  <button class="back-button" (click)="goBack()">← Back</button>
+  <h1>Projects for {{ teamName || 'Selected Team' }}</h1>
+  <button *ngIf="isAdmin" class="new-button" (click)="openProjectPopup()">New</button>
+
+  <div *ngIf="projects.length === 0" class="no-projects">
+    <p>No projects available for this team.</p>
+  </div>
+
+  <div *ngFor="let project of projects" class="project-card">
+    <h3>{{ project.name }}</h3>
+    <p>{{ project.description }}</p>
+    <p class="status" [class.active]="project.active" [class.inactive]="!project.active">
+      {{ project.active ? 'Active' : 'Inactive' }}
+    </p>
+    <button *ngIf="isAdmin" (click)="openProjectPopup(project)" class="editButton">Edit</button>
+  </div>
+
+  <!-- New Project Popup -->
+  <app-project-form
+    *ngIf="showNewProjectPopup"
+    [isEdit]="false"
+    [form]="{ name: '', description: '', active: true }"
+    [teamId]="teamId"
+    [isAdmin]="isAdmin"
+    (close)="closeProjectPopup()"
+    (projectUpdated)="fetchProjects(teamId!)"
+  ></app-project-form>
+
+  <!-- Edit Project Popup -->
+  <app-project-form
+    *ngIf="showEditProjectPopup"
+    [isEdit]="true"
+    [form]="selectedProject"
+    [teamId]="teamId"
+    [isAdmin]="isAdmin"
+    (close)="closeProjectPopup()"
+    (projectUpdated)="fetchProjects(teamId!)"
+  ></app-project-form>
+</div>

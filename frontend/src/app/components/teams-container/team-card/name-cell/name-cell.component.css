@@ -1,0 +1,13 @@
+.name-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 103px;
+    height: 32px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #1BA098;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}

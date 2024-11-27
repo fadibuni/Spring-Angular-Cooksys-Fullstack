@@ -1,0 +1,25 @@
+.page{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #051622;
+    overflow: hidden;
+}
+
+
+.title{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #1BA098;
+}
+
+.buttonContainer{
+    size: 2.5em;
+}

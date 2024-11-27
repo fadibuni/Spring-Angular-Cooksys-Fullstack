@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <div class="navbar-left">
+    <a class="navbar-brand" routerLink="/announcements">Brand</a>
+    <div class="top-banner">
+      <span *ngIf="isAdmin; else workerBanner">ACTING AS ADMIN</span>
+      <ng-template #workerBanner>
+        <span>{{ user?.firstName }} {{ user?.lastName }}</span>
+      </ng-template>
+    </div>
+  </div>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/announcements" routerLinkActive="active">Home</a>
+    </li>
+    <li class="nav-item" *ngIf="isAdmin">
+      <a class="nav-link" routerLink="/company" routerLinkActive="active">Company</a>
+    </li>
+    <li class="nav-item" *ngIf="isAdmin">
+      <a class="nav-link" routerLink="/teams" routerLinkActive="active">Teams</a>
+    </li>
+    <li class="nav-item" *ngIf="isAdmin">
+      <a class="nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="logout()">Logout</a>
+    </li>
+  </ul>
+</nav>

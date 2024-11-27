@@ -1,0 +1,55 @@
+<div class="overlay" (click)="closeForm()"></div>
+
+<div class="team-form-container">
+  <button class="close-btn" (click)="closeForm()">×</button>
+  <form>
+    <div class="form-group">
+      <label for="teamName">Team Name:</label>
+      <input
+        id="teamName"
+        type="text"
+        [(ngModel)]="teamName"
+        name="teamName"
+        required
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea
+        id="description"
+        [(ngModel)]="description"
+        name="description"
+        required
+        class="form-control"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="members">Add Members:</label>
+      <select
+        id="members"
+        (change)="addMember($event)"
+        class="form-control"
+      >
+      <option value="" disabled selected>Select a member to add</option>
+        <option *ngFor="let member of members" [value]="member.profile.firstName + ' ' +  member.profile.lastName.charAt(0) +'.'">
+          {{ member.profile.firstName }} {{ member.profile.lastName.charAt(0) }}.
+        </option>
+      </select>
+    </div>
+
+    <div class="selected-members"></div>
+    <div class="selected-member"*ngFor="let member of selectedMembers">
+      <app-name-cell
+        [name]="member.profile.firstName + ' ' + member.profile.lastName.charAt(0) + '.'"
+        class="selected-member"
+      >
+      </app-name-cell>
+      <a (click)="removeMember(member)" class="remove-btn">X</a>
+    </div>
+
+    <button (click)="submitTeam()" class="btn btn-primary">Submit</button>
+  </form>
+</div>

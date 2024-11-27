@@ -1,0 +1,93 @@
+/* Popup container */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #051622;
+    border-radius: 10px;
+    width: 500px;
+    padding: 30px;
+    color: #deb992;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Header */
+  .popup-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .popup-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  /* Close button */
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #deb992;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    color: #ff6b6b;
+  }
+  
+  /* Form styling */
+  .popup-form .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .popup-form label {
+    display: block;
+    font-size: 0.9rem;
+    color: #deb992;
+    margin-bottom: 5px;
+  }
+  
+  .popup-form input,
+  .popup-form textarea,
+  .popup-form select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #deb992;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #051622;
+  }
+  
+  .popup-form textarea {
+    resize: vertical;
+  }
+  
+  .popup-form .form-actions {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .submit-button {
+    background-color: #1ba098;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #051622;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #178978;
+    transform: scale(1.05);
+  }
+  

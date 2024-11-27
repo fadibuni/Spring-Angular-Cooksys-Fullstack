@@ -1,0 +1,25 @@
+<div class="pageLogin">
+    <div class="title">
+        <h1>Cook Systems</h1>
+        <h2>A Final App</h2>
+    </div>
+    <div class="loginBox">
+        <div class="img"></div>
+        <div class="info">
+            <label for="email" class="emailLabel">email</label>
+            <div class="email-container">
+                <input type="userEmail" id="userEmail" placeholder="yourEmail@email.com" [(ngModel)]="email"/>
+            </div>
+            <label for="password" class="passwordLabel">password</label>
+            <div class="password-container">
+                <input type="userPassword" id="userPassword" placeholder="password" [(ngModel)]="password"/>
+            </div>
+        </div>
+        <button class="loginButton" (click)="login()">Login</button>
+    </div>
+
+</div>
+
+<div *ngIf="isLoggedIn">
+    <app-announcements></app-announcements>
+</div>
